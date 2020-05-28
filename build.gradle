@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'javax.servlet:jstl'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.security:spring-security-test'
+    implementation 'org.springframework.boot:spring-boot-starter-mustache:2.2.6.RELEASE'
+
+    implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+    implementation 'com.h2database:h2:1.4.197'
+    implementation 'org.hibernate:hibernate-core:5.4.2.Final'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
